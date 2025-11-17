@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cloudflare AI Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-background">
+    <div class="chat-card">
+      <header class="chat-header">
+        <div class="chat-title">
+          <span class="logo-dot"></span>
+          <div>
+            <h1>Cloudflare AI Assistant</h1>
+            <p>Powered by Workers AI + KV</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <label class="toggle-label">
+            <input type="checkbox" id="tts-toggle" checked />
+            <span class="toggle-pill"></span>
+            <span class="toggle-text">Voice replies</span>
+          </label>
+          <button id="reset-btn" class="reset-btn" title="Reset conversation">
+            Reset
+          </button>
+        </div>
+      </header>
+
+      <main id="messages" class="chat-messages"></main>
+
+      <footer class="chat-footer">
+        <form id="chat-form">
+          <textarea
+            id="input"
+            rows="1"
+            placeholder="Ask a question about anything..."
+            autocomplete="off"
+          ></textarea>
+
+          <div class="button-row">
+            <button
+              type="button"
+              id="mic-btn"
+              class="icon-btn"
+              title="Speak your question"
+            >
+              🎙️
+            </button>
+            <button id="send-btn" type="submit">
+              <span id="send-text">Send</span>
+              <span id="send-loading" class="hidden">...</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="status-line">
+          <span id="status-indicator" class="status-dot status-ok"></span>
+          <span id="status-text">Connected to Worker</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="credits">
+      Built for the Cloudflare optional AI assignment – Aayush Swami
+    </div>
+  </div>
+<div class="header-actions">
+  <select id="model-select" class="model-select">
+    <option value="fast">Llama 3.1 8B (Fast)</option>
+    <option value="quality">Llama 3.1 70B (Quality)</option>
+  </select>
+
+  <button id="summary-btn" class="small-btn" type="button">
+    Summarize
+  </button>
+
+  <button id="download-btn" class="small-btn" type="button">
+    Download Chat
+  </button>
+
+  <label class="toggle-label">
+    <input type="checkbox" id="tts-toggle" checked />
+    <span class="toggle-pill"></span>
+    <span class="toggle-text">Voice replies</span>
+  </label>
+
+  <button id="reset-btn" class="reset-btn" type="button">
+    Reset
+  </button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
