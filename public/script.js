@@ -269,7 +269,7 @@ if (SpeechRec) {
     micBtn.classList.remove("listening");
   });
 } else {
-  micBtn.title = "Voice input not supported in this browser";
+  micBtn.title = "Voice input not supported in this type browser";
 }
 
 micBtn.addEventListener("click", () => {

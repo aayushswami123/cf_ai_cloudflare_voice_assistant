@@ -26,7 +26,7 @@ The goal is to demonstrate how to orchestrate Workers AI with stateful component
 - 📊 **Session analytics** using a Durable Object (message counts, chars, models used)
 - 🧾 **Conversation summary** endpoint (LLM-generated summary)
 - 📥 **Download transcript** as `.txt`
-- 🌐 **Deployed frontend** on Cloudflare Pages
+
 
 ---
 

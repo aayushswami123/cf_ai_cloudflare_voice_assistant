@@ -17,7 +17,7 @@ This file documents the AI-assisted prompts used while building **cf_ai_cloudfla
 **How I used the response:**
 
 - Adapted the suggested `env.AI.run()` call for Workers AI.
-- Implemented `/api/chat` with request/response JSON and KV memory.
+- Implemented `/api/chat` with  request/response JSON and KV memory.
 
 ---
 
